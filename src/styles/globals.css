@@ -1,0 +1,136 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary: hsl(82, 49%, 63%);
+	--primaryLight: hsl(82, 49%, 73%);
+	--primaryCta: hsl(57, 84%, 56%);
+	--secondary: hsl(9, 80%, 57%);
+	--secondaryLight: hsl(9, 80%, 61%);
+	--headerColor: #1a1a1a;
+	--bodyTextColor: hsl(0, 0%, 0%);
+	--bodyTextColorWhite: hsl(210, 25%, 98%);
+	/* 13px - 16px */
+	--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+	/* 31px - 49px */
+	--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+	--bodyFontSize: 1rem;
+	/* 60px - 100px top and bottom */
+	--sectionPadding: 4rem;
+	--fontSans: "DM Sans", sans-serif;
+	--fontPlay: "Playfair Display", serif;
+}
+
+.cs-topper {
+	font-size: var(--topperFontSize);
+	line-height: 1.2em;
+	text-transform: uppercase;
+	text-align: inherit;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+	color: var(--primary);
+	margin-bottom: 0.25rem;
+	display: block;
+}
+
+.cs-title {
+	font-size: var(--headerFontSize);
+	font-weight: 900;
+	line-height: 1.2em;
+	text-align: inherit;
+	max-width: 43.75rem;
+	margin: 0 0 1rem 0;
+	color: var(--headerColor);
+	position: relative;
+}
+
+.cs-text {
+	font-size: var(--bodyFontSize);
+	line-height: 1.5em;
+	text-align: inherit;
+	width: 100%;
+	max-width: 40.625rem;
+	margin: 0;
+	color: var(--bodyTextColor);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+:target {
+	scroll-margin-block: 5ex;
+}
